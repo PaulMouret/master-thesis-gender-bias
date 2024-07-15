@@ -3,8 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.inference_utils import load_model, load_tokenizer, get_pronouns_indices, get_pronouns_probabilities
 from utils.global_utils import print_descriptive_statistics, print_full_descriptive_statistics

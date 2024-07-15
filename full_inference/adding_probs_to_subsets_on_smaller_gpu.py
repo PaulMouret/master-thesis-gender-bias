@@ -1,6 +1,4 @@
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.inference_utils import add_inference_to_subset
 from utils.global_utils import file_already_exists

@@ -7,8 +7,6 @@ from blingfire import text_to_words
 from prettytable import PrettyTable
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.global_utils import print_descriptive_statistics, print_full_descriptive_statistics, prettytable_to_latex
 from utils.constants_utils import *

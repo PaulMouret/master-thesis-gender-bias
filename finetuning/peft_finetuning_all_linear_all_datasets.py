@@ -1,8 +1,6 @@
 import numpy as np
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.constants_utils import *
 from utils.finetuning_utils import finetuning

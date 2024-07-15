@@ -9,8 +9,6 @@ from collections import defaultdict
 import time
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.constants_utils import *
 from causal_trace import ModelAndTokenizer, guess_subject, calculate_hidden_flow, collect_embedding_std

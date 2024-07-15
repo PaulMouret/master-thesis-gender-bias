@@ -1,8 +1,6 @@
 import numpy as np
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.global_utils import load_obj_from_jsonfile, store_obj_in_jsonfile
 from statistics_dataset_creation_utils import get_list_of_created_statistics, get_histogram_length

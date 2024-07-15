@@ -3,8 +3,6 @@
 import torch
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from causal_trace import layername
 from causal_tracing_utils import layername, project_representation

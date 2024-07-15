@@ -9,8 +9,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.global_utils import print_descriptive_statistics, print_full_descriptive_statistics, prettytable_to_latex, store_obj_in_jsonfile, load_obj_from_jsonfile, file_already_exists
 from utils.constants_utils import *

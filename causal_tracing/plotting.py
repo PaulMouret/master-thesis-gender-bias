@@ -3,8 +3,6 @@ from matplotlib import pyplot as plt
 from datasets import load_dataset
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from utils.global_utils import bias_score, bias_score_from_couple
 from plotting_utils import heatmap, annotate_heatmap

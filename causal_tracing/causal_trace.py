@@ -14,8 +14,6 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 
 import sys
-sys.path.insert(1, '/lnet/aic/personal/mouretp/master_thesis2')
-#This insertion is ugly and should not be necessary, but for some reason it is on cluster
 
 from knowns import KnownsDataset
 from causal_tracing_globals import DATA_DIR
