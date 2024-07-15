@@ -16,12 +16,3 @@ std_data.json
 **/for_each_sentence/
 *.npy
 **/results_05_20/
-
-*.err
-*.out
-*.png
-**/draft/
-*.pdf
-*table.txt
-*table_latex.txt
-**/saved_objects/
