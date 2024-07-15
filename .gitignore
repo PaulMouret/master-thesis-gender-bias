@@ -24,3 +24,4 @@ std_data.json
 *.pdf
 *table.txt
 *table_latex.txt
+**/saved_objects/
