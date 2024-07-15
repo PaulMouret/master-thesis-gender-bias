@@ -1,0 +1,26 @@
+\begin
+{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+   word   &  first  &  middle  &  penultimate  &  last  &  total  \\ \hline
+    "     &   2.6   &   0.2    &      0.3      &  2.3   &   5.3   \\ \hline
+    '     &   1.6   &   0.1    &      0.1      &  1.4   &   3.2   \\ \hline
+    ,     &    0    &   1.6    &      4.0      &  7.0   &   12.6  \\ \hline
+    .     &   0.0   &   0.3    &      0.1      &  0.0   &   0.4   \\ \hline
+    !     &    0    &   0.0    &      0.2      &   0    &   0.2   \\ \hline
+    ?     &    0    &   0.0    &      0.6      &  0.0   &   0.6   \\ \hline
+   the    &   3.8   &   1.6    &      0.3      &   0    &   5.7   \\ \hline
+    i     &   2.6   &   0.4    &      0.0      &   0    &   3.0   \\ \hline
+    it    &   2.2   &   0.3    &      0.0      &  0.0   &   2.6   \\ \hline
+   was    &   0.1   &   0.9    &      0.1      &  0.1   &   1.0   \\ \hline
+   that   &   0.3   &   0.3    &      0.1      &  0.7   &   1.5   \\ \hline
+   and    &   0.8   &   0.4    &      0.1      &  0.6   &   1.9   \\ \hline
+    as    &   0.8   &   0.2    &      0.0      &  0.3   &   1.3   \\ \hline
+    to    &   0.2   &   0.7    &      0.1      &   0    &   0.9   \\ \hline
+    a     &   0.7   &   0.6    &      0.1      &   0    &   1.4   \\ \hline
+ [other]  &   26.3  &   19.2   &      6.8      &  6.7   &   58.4  \\ \hline
+  total   &   42.0  &   26.8   &      12.9     &  19.1  &  100.0  \\ \hline
+\end{tabular}
+\caption{\label{my-label}My title}
+\end{table}

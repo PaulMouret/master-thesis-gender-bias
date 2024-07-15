@@ -1,0 +1,46 @@
++--------------+---------------------+
+|     word     | stereotypical score |
++--------------+---------------------+
+| receptionist |        -3.172       |
+|    nurse     |        -2.175       |
+|     echo     |        -2.155       |
+|    blonde    |        -1.853       |
+|    siren     |        -1.729       |
+|  librarian   |        -1.706       |
+|    makeup    |        -1.633       |
+|    heels     |        -1.473       |
+|   lipstick   |        -1.45        |
+|     rape     |        -1.384       |
+|     bra      |        -1.323       |
+|    nurses    |        -1.287       |
+|   panties    |        -1.279       |
+|   kendall    |        -1.248       |
+|   giggled    |        -1.229       |
+|    virgin    |        -1.168       |
+|     slut     |        -1.137       |
+|    honey     |        -1.112       |
+|    whore     |        -1.103       |
+|  clutching   |        -1.09        |
+|   pregnant   |        -1.084       |
+|    wisdom    |        -1.079       |
+|   deciding   |        -1.071       |
+|   frankie    |        -1.058       |
+|     _and     |        -1.057       |
+|   necklace   |        -1.053       |
+|    fairy     |        -1.046       |
+|   grabbing   |        -1.037       |
+|    dancer    |        -1.036       |
+|   darling    |        -1.008       |
+|    _maybe    |        -0.998       |
+|   twisting   |        -0.987       |
+|     _oh      |        -0.961       |
+|    kitten    |        -0.954       |
+|    outfit    |        -0.95        |
+|   sweetie    |        -0.907       |
+|     min      |        -0.904       |
+|    gossip    |        -0.894       |
+|   teenager   |        -0.848       |
+|     pink     |        -0.835       |
+|    giggle    |        -0.835       |
+|   shutting   |        -0.827       |
++--------------+---------------------+

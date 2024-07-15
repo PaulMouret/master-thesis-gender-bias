@@ -1,0 +1,56 @@
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{18} \& \context{Also} \& \context{day} \& \context{by} \& \context{day} \& \context{,} \& \context{from} \& \context{the} \& \context{first} \& \context{day} \& \context{unto} \& \context{the} \& \context{last} \& \context{day} \& \context{,} \\
+\textbf{1.114} \& \textbf{0.009} \& \textbf{0.02} \& \textbf{-0.059} \& \textbf{0.02} \& \textbf{-0.017} \& \textbf{-0.103} \& \textbf{-0.06} \& \textbf{-0.068} \& \textbf{0.02} \& \textbf{2.509} \& \textbf{-0.06} \& \textbf{-0.152} \& \textbf{0.02} \& \textbf{-0.017} \\
+10.419 \& 8.519 \& 5.026 \& 7.55 \& 7.767 \& 5.33 \& 3.275 \& 2.987 \& 1.473 \& 1.957 \& 4.041 \& 1.708 \& 1.474 \& 3.479 \& 8.291 \\
+\end{deptext}
+\end{dependency} & 97.7 & 0.0 & 97.7 & 16.39 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{"} \& \context{Do} \& \context{n't} \& \context{work} \& \context{too} \& \context{hard} \& \context{on} \& \context{your} \& \context{lipstick} \& \context{,} \& \context{"} \\
+\textbf{-0.066} \& \textbf{-0.073} \& \textbf{-0.264} \& \textbf{-0.086} \& \textbf{-0.081} \& \textbf{-0.072} \& \textbf{-0.126} \& \textbf{-0.066} \& \textbf{-1.45} \& \textbf{-0.017} \& \textbf{-0.066} \\
+0.3 \& -0.085 \& 0.112 \& 0.528 \& 0.256 \& -0.055 \& 0.626 \& 0.237 \& -0.915 \& 0.814 \& 0.814 \\
+\end{deptext}
+\end{dependency} & 19.2 & 20.7 & 39.9 & -0.11 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{Behind} \& \context{those} \& \context{red} \& \context{covered} \& \context{lips} \& \context{in} \& \context{lipstick} \& \context{,} \\
+\textbf{-0.112} \& \textbf{-0.068} \& \textbf{-0.048} \& \textbf{-0.123} \& \textbf{-0.015} \& \textbf{-0.098} \& \textbf{-1.45} \& \textbf{-0.017} \\
+-1.543 \& -0.557 \& -0.357 \& -0.178 \& -0.374 \& -0.197 \& -1.464 \& -0.958 \\
+\end{deptext}
+\end{dependency} & 1.0 & 3.0 & 3.9 & -1.62 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{Downstairs} \& \context{,} \& \context{\hlrelated{the}} \& \context{\hlrelated{security}} \& \context{\hlrelated{guard}} \& \context{\hlrelated{hurried}} \& \context{from} \& \context{behind} \& \context{the} \& \context{booth} \& \context{when} \\
+\textbf{-0.674} \& \textbf{-0.017} \& \textbf{-0.06} \& \textbf{0.044} \& \textbf{0.463} \& \textbf{0.009} \& \textbf{-0.103} \& \textbf{-0.112} \& \textbf{-0.06} \& \textbf{-0.053} \& \textbf{-0.077} \\
+-0.98 \& -0.054 \& -0.178 \& 0.01 \& 0.178 \& 0.102 \& 0.161 \& 0.161 \& -0.019 \& 0.417 \& 0.539 \\
+\end{deptext}
+\end{dependency} & 69.2 & 5.2 & 74.3 & 3.74 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{\hlrelated{The}} \& \context{\hlrelated{guard}} \& \context{'s} \& \context{\hlrelated{eyes}} \& \context{widened} \& \context{as} \\
+\textbf{-0.06} \& \textbf{0.463} \& \textbf{-0.164} \& \textbf{-0.118} \& \textbf{-0.504} \& \textbf{-0.06} \\
+0.686 \& 1.931 \& 0.387 \& -0.248 \& -0.263 \& -0.016 \\
+\end{deptext}
+\end{dependency} & 61.2 & 4.6 & 65.7 & 3.74 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{"} \& \context{A} \& \context{nightmare} \& \context{,} \& \context{eh} \& \context{?} \& \context{"} \\
+\textbf{-0.066} \& \textbf{-0.06} \& \textbf{-0.464} \& \textbf{-0.017} \& \textbf{0.535} \& \textbf{-0.202} \& \textbf{-0.066} \\
+0.64 \& 0.045 \& -0.097 \& 0.188 \& 1.246 \& 0.31 \& 0.31 \\
+\end{deptext}
+\end{dependency} & 3.6 & 1.3 & 4.9 & 1.51 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{"} \& \context{Why} \& \context{are} \& \context{\hlrelated{we}} \& \context{\hlrelated{leaving}} \& \context{the} \& \context{party} \& \context{so} \& \context{early} \& \context{?} \& \context{"} \\
+\textbf{-0.066} \& \textbf{-0.067} \& \textbf{-0.168} \& \textbf{-0.072} \& \textbf{-0.11} \& \textbf{-0.06} \& \textbf{-0.111} \& \textbf{-0.065} \& \textbf{-0.07} \& \textbf{-0.202} \& \textbf{-0.066} \\
+-0.634 \& -0.374 \& -0.384 \& -0.51 \& -0.285 \& -0.173 \& -0.272 \& 0.008 \& -0.127 \& -0.145 \& -0.145 \\
+\end{deptext}
+\end{dependency} & 2.4 & 4.0 & 6.4 & -0.74 \\ \hline
+\begin{dependency}
+\begin{deptext}[column sep=0.2cm]
+\context{With} \& \context{blue} \& \context{eyes} \& \context{as} \& \context{pale} \& \context{as} \& \context{the} \& \context{rain} \& \context{,} \\
+\textbf{-0.18} \& \textbf{-0.019} \& \textbf{-0.118} \& \textbf{-0.06} \& \textbf{0.013} \& \textbf{-0.06} \& \textbf{-0.06} \& \textbf{-0.019} \& \textbf{-0.017} \\
+-1.366 \& -0.701 \& -0.799 \& -0.567 \& -0.031 \& 0.213 \& -0.042 \& -0.364 \& -0.094 \\
+\end{deptext}
+\end{dependency} & 6.5 & 14.2 & 20.7 & -1.13 \\ \hline

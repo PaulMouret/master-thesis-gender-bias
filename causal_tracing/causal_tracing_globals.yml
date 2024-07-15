@@ -1,0 +1,20 @@
+---
+  # Result files
+  RESULTS_DIR: "../created_datasets/causal_tracing_datasets"
+
+  # Output directory
+  OUTPUT_DIR: None
+
+  # Data files
+  DATA_DIR: "../created_datasets/causal_tracing_datasets"
+  STATS_DIR: None
+
+
+  # Model file
+  MODEL_DIR: None
+
+  # Hyperparameters
+  HPARAMS_DIR: None
+
+  # Remote URLs
+  REMOTE_ROOT_URL: None

@@ -1,0 +1,50 @@
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+    word     &  stereotypical score  \\ \hline
+  psalmist   &         5.737         \\ \hline
+  prophet    &          3.59         \\ \hline
+  believer   &         3.349         \\ \hline
+   nigga     &          3.17         \\ \hline
+ revelation  &         3.006         \\ \hline
+   behold    &         2.754         \\ \hline
+    unto     &         2.509         \\ \hline
+  corporal   &         2.253         \\ \hline
+  preacher   &         2.177         \\ \hline
+   pastor    &         1.986         \\ \hline
+   farmer    &         1.886         \\ \hline
+   waiter    &         1.886         \\ \hline
+ constable   &         1.843         \\ \hline
+  sorcerer   &         1.825         \\ \hline
+   devil     &         1.784         \\ \hline
+  bastard    &         1.699         \\ \hline
+    jew      &         1.668         \\ \hline
+     22      &         1.587         \\ \hline
+  merchant   &         1.579         \\ \hline
+  admiral    &         1.499         \\ \hline
+ collector   &         1.455         \\ \hline
+  colonel    &         1.433         \\ \hline
+  confess    &         1.385         \\ \hline
+   prick     &         1.348         \\ \hline
+  mechanic   &         1.347         \\ \hline
+     21      &         1.325         \\ \hline
+     >       &         1.242         \\ \hline
+  creator    &         1.242         \\ \hline
+   clown     &         1.229         \\ \hline
+  blessed    &         1.207         \\ \hline
+   dwarf     &         1.198         \\ \hline
+   cursed    &         1.189         \\ \hline
+   sailor    &         1.182         \\ \hline
+    len      &         1.157         \\ \hline
+   thief     &         1.132         \\ \hline
+   knight    &          1.13         \\ \hline
+ therefore   &         1.125         \\ \hline
+  general    &         1.122         \\ \hline
+     18      &         1.114         \\ \hline
+   angels    &         1.088         \\ \hline
+    mate     &         1.073         \\ \hline
+    thou     &         1.072         \\ \hline
+\end{tabular}
+\caption{\label{my-label}My title}
+\end{table}

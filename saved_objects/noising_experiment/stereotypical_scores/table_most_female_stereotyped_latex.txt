@@ -1,0 +1,50 @@
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+     word      &  stereotypical score  \\ \hline
+ receptionist  &         -3.172        \\ \hline
+    nurse      &         -2.175        \\ \hline
+     echo      &         -2.155        \\ \hline
+    blonde     &         -1.853        \\ \hline
+    siren      &         -1.729        \\ \hline
+  librarian    &         -1.706        \\ \hline
+    makeup     &         -1.633        \\ \hline
+    heels      &         -1.473        \\ \hline
+   lipstick    &         -1.45         \\ \hline
+     rape      &         -1.384        \\ \hline
+     bra       &         -1.323        \\ \hline
+    nurses     &         -1.287        \\ \hline
+   panties     &         -1.279        \\ \hline
+   kendall     &         -1.248        \\ \hline
+   giggled     &         -1.229        \\ \hline
+    virgin     &         -1.168        \\ \hline
+     slut      &         -1.137        \\ \hline
+    honey      &         -1.112        \\ \hline
+    whore      &         -1.103        \\ \hline
+  clutching    &         -1.09         \\ \hline
+   pregnant    &         -1.084        \\ \hline
+    wisdom     &         -1.079        \\ \hline
+   deciding    &         -1.071        \\ \hline
+   frankie     &         -1.058        \\ \hline
+     \_and      &         -1.057        \\ \hline
+   necklace    &         -1.053        \\ \hline
+    fairy      &         -1.046        \\ \hline
+   grabbing    &         -1.037        \\ \hline
+    dancer     &         -1.036        \\ \hline
+   darling     &         -1.008        \\ \hline
+    \_maybe     &         -0.998        \\ \hline
+   twisting    &         -0.987        \\ \hline
+     \_oh       &         -0.961        \\ \hline
+    kitten     &         -0.954        \\ \hline
+    outfit     &         -0.95         \\ \hline
+   sweetie     &         -0.907        \\ \hline
+     min       &         -0.904        \\ \hline
+    gossip     &         -0.894        \\ \hline
+   teenager    &         -0.848        \\ \hline
+     pink      &         -0.835        \\ \hline
+    giggle     &         -0.835        \\ \hline
+   shutting    &         -0.827        \\ \hline
+\end{tabular}
+\caption{\label{my-label}My title}
+\end{table}
