@@ -1,24 +1,41 @@
-As there are many files, and as I may have to run some parts of the code several times, with differents datasets,
-here is the order in which I ran these files.
-Their status (typically the parameters they have been run with) is written **in bold**.
-Important remarks are written *in italic*.
-Between parentheses are function modules (which are not run directly).
+# Evaluation of gender bias of Large Language Models in natural contexts
 
+A few variables, such as huggingface login tokens and GPU devices in .sh scripts,
+should be modified manually for the reader to use them.
+Moreover, for storage reasons, some source datasets
+and other folders (such as results_05_20/) are not included in this
+git repository and should be imported manually.
+Note that, when storing results files, we often assume that the corresponding
+folder already exists; hence, it should be created in advance, or the code should be updated.
+
+Here is the organisation and order in which the code should be run.
+Between parentheses are function modules (which are not run directly).
 As .jsonl files usually correspond to large files and thus are discarded by .gitignore, the .jsonl results 
 should be imported manually. The tag *(JSONL)* appears when one is created.
 
-The scripts files beginning with all_* regroup several programs, to be more efficient during running.
+## Getting source files
 
-empty.txt files are here to force git to add empty repositories
+* Source files should be imported manually into source_datasets/ : 
+  train_dama.json from [DAMA](https://github.com/tomlimi/DAMA)
+  and out_txts/ the folder containing .txt files that compose BookCorpus.
+  Note that
+  firstnames.csv from [firstname-database
+](https://github.com/MatthiasWinkelmann/firstname-database),
+  gender_of_persons.json from [gendered_words
+](https://github.com/ecmonsen/gendered_words)
+  and professions.json from [DAMA](https://github.com/tomlimi/DAMA)
+  already are in the git repository.
 
-# Getting source files
+* make_sentlines.py : to transform BookCorpus (saved in out_txts/) 
+  into a sentence list .txt file
+  
+* save_wikitext.py : downloads the dataset used to compute perplexity
 
-* save_wikitext.py
+## DAMA utils
 
-* I downloaded other files manually from various places ; 
-  and processed BookCorpus into a sentence list .txt file using make_sentlines.py
+* (dama_l_hparams.py / model_utils.py) : for loading a DAMA-finetuned model
 
-# Utils
+## Utils
 
 * (global_utils.py)
 
@@ -35,90 +52,70 @@ empty.txt files are here to force git to add empty repositories
 
 * (perplexity.py) : called in inference_utils.py, to compute perplexity of a model
 
-# Context dataset creation
+## Context dataset creation
 
 * (dataset_creation_utils.py)
 
 * gender_of_persons.py / firstnames.py / manual_gendered_words.py / stereotyped_occupations.py : 
-  to get corresponding utils datasets and statistics
-  *(note that manual_gendered_words.py can be progressively updated and rerun, so everytime the whole process
-  has to be done again ;
-  moreover there are two types of gendered firstnames : English / English or of length > 3)*
-  **Up-to-date (ie. manual_gendered_words.py has been run with latest changes)**
+  to get corresponding utils datasets and statistics.
+  Note that manual_gendered_words.py can be progressively updated and rerun.
 
-* creating_dataset.py / creating_other_datasets.py : 
-  to create the context datasets and the corresponding statistics
+* creating_dataset.py : 
+  to create the context dataset and the corresponding statistics
   *(JSONL)*
-  **Up-to-date
-  (ie. taking latest changes of utils_datasets into account)**
   
 * (statistics_dataset_creation_utils.py)
   
 * statistics_visualization.py : 
   to print and save as .png files the statistics corresponding to the created datasets
-  **Up-to-date (ie. performed on the latest context dataset that has been created)**
   
 * update_context_dataset_with_manual.py : 
   to remove contexts that contain a word specified in manual_gendered : it avoids 
-  reconstructing the whole dataset, when we just remove contexts and just a few of them)
-  *However, note that, this way, statistics about the number of contexts are not the same
-  anymore ; for this the whole dataset creation should be rerun*
+  reconstructing the whole dataset, when we just remove contexts and just a few of them).
+  However, note that, this way,
+  statistics about the number of contexts are not updated ;
+  for this the whole dataset creation should be rerun.
   *(JSONL)*
   
-# Preliminary work
+## Preliminary work (optional)
 
-## Batch size analysis
+### Batch size analysis
 
 * get_max_batch_size.py : 
   to get the optimal batch_size that should be used with the model
-  **The optimal batch_size are, in decreasing order, 64, 32, 16. In particular, 16 is better than 24
-  (maybe because it is a power of 2) and the model (on AIC GPU) can manage at least batch size 64.
-  However in some cases 64 is too much for memory.
-  NOT UP-TO-DATE with latest dataset (but should get similar results)**
 
-## Deterministic analysis
+### Deterministic analysis
 
 * is_deterministic.py : 
-  to make sure the Llama 2 model is deterministic
-  **It is indeed.
-  NOT UP-TO-DATE with latest dataset (but should get similar results)**
+  to make sure the model is deterministic
   
-## Padding analysis
+### Padding analysis
 
 * (padding_analysis_utils.py)
 
 * padding_analysis.py : 
   to get the inference results for padded variants (saved in .json files)
   and the histograms of corresponding statistics (saved as .png files).
-  **NOT UP-TO-DATE with latest dataset (but should get similar results)**
   
 * padding_side_analysis.py : 
-  to compare between padding on the left (the one I chose) and on the right
+  to compare between padding on the left (the one I choose) and on the right
   
-# Evaluating bias
-
-* full_inference.py : 
-  to get the pronoun probabilities (stored in a .json file) for a whole dataset.
-  *Except the inference time, that may be useful in a first step to compare parameters,
-  it is simply less informative than adding_probs_to_subsets.py, so at some point it should
-  not be used anymore.*
+## Evaluating bias (full inference)
   
 * adding_probs_to_subsets.py : 
   to create subsets with inference results (probs, bias and relevance scores),
   in order not to do it everytime
   *(JSONL)*
-  **Run for LLaMA 2 7B, subset_sizes 1000, 50,000 and 200,000**
   
 * (benchmark_utils.py)
   
 * benchmark.py / complementary_benchmark_code.py : 
   to get statistics (about probabilities, bias and relevance) and plots (saved as .png files) 
-  about a subset of created contexts. We use the results from naive_full_inference.
-  **Up-to-date (ie. performed on all inference datasets that have been created)**
+  about a subset of created contexts.
 
-# Noising experiment
+## Stereotype analysis (noising experiment)
 
-## Determining hyperparameters for noising experiment
+### Determining hyperparameters for noising experiment
 
 * test_hypothesis_emb_variance.py : to find the value of sigma_t (final_std) 
   and store token embeddings
@@ -129,89 +126,96 @@ empty.txt files are here to force git to add empty repositories
 
 * test_optimal_alpha.py : determines the best alpha based on results of find_optimal_alpha.py
 
-## Running the actual noising experiment
+### Running the actual noising experiment
 
-* final_noising_experiment.py : performs the noising experiment (with the optimal value for alpha)
-**(JSONL)**
+* final_noising_experiment.py : performs the noising experiment *(JSONL)*
 
-## Analyzing results of the noising experiment
+### Analyzing results of the noising experiment
 
 * analysis_final_noising_experiment.py : analyses global results of final_noising_experiment.py ; 
   distribution of corrupted biases and relevances, distribution of biases and relevance differences,
   analysis of crucial words
 
-* analysis_distribution_bias_diff.py : analysis the distribution of bias difference, in order to 
-  determine the reliability conditions for the stereotypical score
+* analysis_distribution_bias_diff.py : analyses the distribution of bias difference, in order to 
+  determine an occurrence threshold for the stereotypical score
 
 * analysis_stereotypical_scores.py : analyses stereotypical scores
 
 * looking_for_contexts.py : a util file enabling to filter contexts
   respecting various conditions, and print them out
   
-# Related words
+* get_results_for_latex.py : produces a latex table of contexts 
+  with inference results, stereotypical scores and bias differences
+  
+## Related words
 
 * create_dataset_to_parse.py : creates the .txt file that will be parsed *(gitignored !)*
 
-* parsing_script.sh : performs parsing and generates an output file *(gitognored !)*
+* parsing_script.sh : performs parsing and generates an output file *(gitognored !)* 
+  Depending on the size of the dataset to parse, parsing should be split.
 
-* format_parsed_contexts.py : includes results in the context dataset that has been parsed *(JSONL)*
+* format_parsed_contexts.py : includes parsing results in the context dataset 
+  that has been parsed *(JSONL)*
 
 * (find_related_words_utils.py)
 
-* find_related_words.py : to add the list of words related to the pronoun for each context 
+* find_related_words.py : adds the list of related words for each context 
   of a given dataset.
   
 * check_related_words.py : prints contexts and their related words
 
-# Causal tracing
+* analysis_related_words.py : analyses related words
 
-* create_known_datasets.py *(gitignored !)*
+* analyses_bias_composition.py : tests several estimates of the bias of a context 
+  based on the stereotypical scores of the words composing it
 
-* (causal_trace.py / causal_tracing_globals.py /causal_tracing_utils.py / gender_trace.py
-  knowns.py) *(because this code is copied, with slight modifications, 
-  from Tomasz Limisiewicz DAMA code, the conventions may be different from the rest of the code,
-  and thus it should not interfere with the rest of the code)*
+## Locating bias (causal tracing)
+
+* create_known_datasets.py *(gitignored !)* : creates the dataset used for causal tracing
+
+* (causal_trace.py / gender_trace.py / causal_tracing_globals.py /
+  causal_tracing_utils.py / gender_trace.py / knowns.py)
+  Because this code is copied, with slight modifications, 
+  from Tomasz Limisiewicz's [DAMA](https://github.com/tomlimi/DAMA) code, 
+  the conventions may be different from the rest of the code,
+  and thus it should not interfere with the rest of the code.
   
-* trace.py *(several scripts, depending on the dataset used to perform causal tracing)*
+* trace.py : the actual causal tracing experiment
+  (several scripts, depending on the dataset used to perform causal tracing)
 
 * (plotting_utils.py)
 
-* plotting.py
+* plotting.py : plots results
 
-# DAMA Finetuning
+* trace_dataset_analysis.py : provides various statistics 
+  about the causal tracing dataset
+
+## Finetuning
 
 * create_datasets_for_dama_finetuning.py : creates datasets for finetuning 
-  based on "DAMA dataset", according to various parameters (in particular strategies)
-  
-* dama_peft_finetuning.py : performs finetuning based on a DAMA finetuning dataset 
-  and pushes the corresponding Peft model to HF
-  
-* pushing_dama_merged_model_to_hub.py : creates the merged model corresponding to 
-  previous Peft model and pushes it to the hub
-  *The files full_inference.py and print_parameters_of_models.py should be run 
-  only after the merged model corresponding to current DAMA_PEFT_REVISION is pushed,
-  else it will raise an error.*
-
-# Finetuning
-
-*Ideally, we would like to avoid using the merged model, because it costs additional
-  time and memory (for pushing and loading)*
+  based on professions dataset, according to various parameters
+  (in particular strategies)
 
 * create_datasets_for_finetuning.py : creates a dataset for finetuning
-  (ie. with relevant sentences, by adding them "he" and "she" at the end :
+  (ie. with relevant sentences, by adding them a pronoun at the end :
   6 possible strategies are used)
   
-* peft_finetuning_all_linear_all_datasets.py :
-  performs finetuning on all linear layers, one finetuning for each finetuning dataset,
-  and pushes the corresponding Peft model to HF
+* peft_finetuning_stereotyped_related.py / peft_finetuning_stereotyped.py 
+  / peft_finetuning_professions.py : performs the actual finetunings
   
-* peft_finetuning_all_linear.py : performs finetuning on all linear layers 
-  and pushes the corresponding Peft model to HF
+* pushing_merged_models_to_hub.py : merging the model and a PEFT module 
+  into a single model. Ideally, we would like to avoid using merged models, 
+  because it costs additional time and memory (for pushing and loading).
   
-* peft_finetuning_limi_layers.py : performs finetuning on linear layers highlighted
-  by Tomasz Limisiewicz in DAMA paper, and pushes the corresponding Peft model to HF
+* DAMA finetuning is performed using [DAMA](https://github.com/tomlimi/DAMA) 
+  and results are reorganized and stored in DAMA_L/ folder
   
-# Evaluation
+## Evaluation
+
+* standard evaluation measures (for bias and language modeling) 
+  are computed using 
+  [DAMA](https://github.com/tomlimi/DAMA) code
+  (after adapting it to PEFT models)
 
 * evaluate_bias_relevance.py : generates inference on test finetuning dataset, for several models
 
