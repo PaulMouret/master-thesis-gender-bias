@@ -11,7 +11,8 @@ folder already exists; hence, it should be created in advance, or the code shoul
 Here is the organisation and order in which the code should be run.
 Between parentheses are function modules (which are not run directly).
 As .jsonl files usually correspond to large files and thus are discarded by .gitignore, the .jsonl results 
-should be imported manually. The tag *(JSONL)* appears when one is created.
+should be imported manually from the computing cluster to the local device. 
+The tag *(JSONL)* appears when one is created.
 
 ## Getting source files
 
