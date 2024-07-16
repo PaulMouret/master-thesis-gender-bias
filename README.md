@@ -215,7 +215,8 @@ should be imported manually. The tag *(JSONL)* appears when one is created.
 * standard evaluation measures (for bias and language modeling) 
   are computed using 
   [DAMA](https://github.com/tomlimi/DAMA) code
-  (after adapting it to PEFT models)
+  (after adapting it to PEFT models).
+  They are considered to be stored in the folder results_05_20/
 
 * evaluate_bias_relevance.py : generates inference on test finetuning dataset, for several models
 
