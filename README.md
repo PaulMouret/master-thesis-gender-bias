@@ -1,10 +1,14 @@
 # Evaluation of gender bias of Large Language Models in natural contexts
 
-A few variables, such as huggingface login tokens and GPU devices in .sh scripts,
-should be modified manually for the reader to use them.
-Moreover, for storage reasons, some source datasets
+For storage reasons, some source datasets
 and other folders (such as results_05_20/) are not included in this
 git repository and should be imported manually.
+**However, contexts_bookcorpus.jsonl, resulting from the context dataset creation,
+and which is the base of the following work,
+was provided as an attachment of the master thesis.**
+
+A few variables, such as huggingface log-in tokens and GPU devices in .sh scripts,
+should be modified manually for the reader to use them.
 Note that, when storing results files, we often assume that the corresponding
 folder already exists; hence, it should be created in advance, or the code should be updated.
 
