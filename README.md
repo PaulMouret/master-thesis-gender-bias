@@ -1,18 +1,21 @@
 # Evaluation of gender bias of Large Language Models in natural contexts
 
+The thesis and the dataset contexts_bookcorpus.jsonl are available on the
+[Charles University Digital Repository](https://dspace.cuni.cz/handle/20.500.11956/193527).
+
 For storage reasons, some source datasets
 and other folders (such as results_05_20/) are not included in this
 git repository and should be imported manually.
-**However, contexts_bookcorpus.jsonl, resulting from the context dataset creation,
-and which is the base of the following work,
-was provided as an attachment of the master thesis.**
+In particular, as mentioned above, contexts_bookcorpus.jsonl,
+which is the basis of the following work, is available on the
+[Charles University Digital Repository](https://dspace.cuni.cz/handle/20.500.11956/193527).
 
 A few variables, such as huggingface log-in tokens and GPU devices in .sh scripts,
 should be modified manually for the reader to use them.
 Note that, when storing results files, we often assume that the corresponding
 folder already exists; hence, it should be created in advance, or the code should be updated.
 
-Here is the organisation and order in which the code should be run.
+Here is the organization and order in which the code should be run.
 Between parentheses are function modules (which are not run directly).
 As .jsonl files usually correspond to large files and thus are discarded by .gitignore, the .jsonl results 
 should be imported manually from the computing cluster to the local device. 
